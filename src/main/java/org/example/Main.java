@@ -5,19 +5,23 @@ import java.util.Arrays;
 public class Main {
 
     public static void main(String[] args) {
-        Park.Attraction[] attractions = new Park.Attraction[2];
-        attractions[0] = new Park.Attraction(
-              "DeathStranding",
-              "7-18",
-              300.50
-        );
-        attractions[1] = new Park.Attraction(
+        Park park = new Park(3);
+
+        Park.Attraction attraction = new Park.Attraction(
                 "DeathStranding",
                 "7-18",
                 300.50
         );
+        Park.Attraction attraction1 = new Park.Attraction(
+                "WindShield",
+                "7-18",
+                300.50
+        );
 
-        Park park = new Park(attractions);
+
+        park.addAttraction(attraction1);
+        park.addAttraction(attraction);
+
         System.out.println(park);
 
         Employee[] employees = new Employee[5];
