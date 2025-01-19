@@ -1,8 +1,8 @@
 package org.example.animals;
 
 public class Dog extends Animal {
-    private static final int runMeters = 500;
-    private static final int swimMeters = 10;
+    private static final int RUN_METERS = 500;
+    private static final int SWIM_METERS = 10;
     private static int counter = 0;
 
     public Dog(String name) {
@@ -12,10 +12,10 @@ public class Dog extends Animal {
 
     @Override
     public void run(int meters) {
-        if (meters <= runMeters && meters > 0) {
+        if (meters <= RUN_METERS && meters > 0) {
             super.run(meters);
-        } else if (meters > runMeters) {
-            System.out.println(name + " устал. Он может пробежать только " + runMeters + "м.");
+        } else if (meters > RUN_METERS) {
+            System.out.println(name + " устал. Он может пробежать только " + RUN_METERS + "м.");
         } else {
             System.out.println(name + " не может бегать задом наперёд!");
         }
@@ -23,10 +23,10 @@ public class Dog extends Animal {
 
     @Override
     public void swim(int meters) {
-        if (meters <= swimMeters && meters > 0) {
+        if (meters <= SWIM_METERS && meters > 0) {
             super.swim(meters);
-        } else if (meters > swimMeters) {
-            System.out.println(name + " утонул. Он может проплыть только " + swimMeters + "м.");
+        } else if (meters > SWIM_METERS) {
+            System.out.println(name + " утонул. Он может проплыть только " + SWIM_METERS + "м.");
         } else {
             System.out.println(name + " не может плавать назад спиной!");
         }

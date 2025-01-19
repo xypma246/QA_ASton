@@ -4,7 +4,7 @@ import org.example.animals.kitchen.Plate;
 
 public class Cat extends Animal {
 
-    private static final int runMeters = 200;
+    private static final int RUN_METERS = 200;
     private static int counter = 0;
     private final int hungerBar;
     private boolean satiety;
@@ -39,10 +39,10 @@ public class Cat extends Animal {
 
     @Override
     public void run(int meters) {
-        if (meters <= runMeters && meters > 0) {
+        if (meters <= RUN_METERS && meters > 0) {
             super.run(meters);
-        } else if (meters > runMeters) {
-            System.out.println(name + " устал. Он может пробежать только " + runMeters + "м.");
+        } else if (meters > RUN_METERS) {
+            System.out.println(name + " устал. Он может пробежать только " + RUN_METERS + "м.");
         } else {
             System.out.println(name + " не может бегать задом наперёд!");
         }
