@@ -8,16 +8,15 @@ import java.util.Set;
 
 public class Main {
     public static void main(String[] args) {
-        List<String> words = List.of(
-                "яблоко", "банан", "вишня", "яблоко", "апельсин",
+        String[] fruits = {"яблоко", "банан", "вишня", "яблоко", "апельсин",
                 "банан", "груша", "вишня", "виноград", "яблоко",
-                "киви", "банан", "манго", "апельсин", "груша"
-        );
+                "киви", "банан", "манго", "апельсин", "груша"};
 
-        Set<String> newFruits = new HashSet<>(words);
+
+        Set<String> newFruits = new HashSet<>(List.of(fruits));
         System.out.println(newFruits);
 
-        System.out.println(getCount(words));
+        System.out.println(getCount(List.of(fruits)));
 
         PhoneBook phoneBook = new PhoneBook();
         phoneBook.add("Grigorev", "123");
